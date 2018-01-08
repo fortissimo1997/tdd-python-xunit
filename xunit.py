@@ -2,7 +2,6 @@ class TestCase:
     def __init__(self, name):
         self.name = name
     def setUp(self):
-        print(self)
         pass
     def run(self):
         self.setUp()
@@ -19,7 +18,6 @@ class WasRun(TestCase):
 class TestCaseTest(TestCase):
     def testRunning(self):
         test = WasRun("testMethod")
-        assert(not test.wasRun)
         test.run()
         assert(test.wasRun)
     def testSetUp(self):
